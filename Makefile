@@ -17,14 +17,11 @@ help:
 push: image
 	docker push $(image_name)
 
-image: flaskwebapp/ResNet_152.model flaskwebapp/synset.txt
+image: flaskwebapp/classifier.h5
 	docker build -t $(image_name) -f flaskwebapp/dockerfile flaskwebapp
 
 flaskwebapp/synset.txt:
 	wget http://data.dmlc.ml/mxnet/models/imagenet/synset.txt -P flaskwebapp
-
-flaskwebapp/ResNet_152.model:
-	wget https://www.cntk.ai/resnet/ResNet_152.model -P flaskwebapp
 
 run-local:
 	docker run -p 88:88 $(image_name)
