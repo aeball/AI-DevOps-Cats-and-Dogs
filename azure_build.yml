@@ -6,7 +6,7 @@ queue:
 #Your build pipeline references an undefined variable named ‘curl -X POST 0.0.0.0:88/test’. Create or edit the build pipeline for this YAML file, define the variable on the Variables tab. See https://go.microsoft.com/fwlink/?linkid=865972
 steps:
 - bash: ./downloadblob.sh
-  arguments: '''blobstoragedevopscloud'  '0CmMaIiqX6gRbGhFIxL5k68Vdfx44QbvXIyuM9A8C7Hamlgwgj5LOgjuj4g4NXWnOWm4glMgpFdzCWWvuK/Wng==' 'ai-devops-storage' 'classifier.h5' '
+  arguments: '''blobstoragedevopscloud'  'security key' 'ai-devops-storage' 'classifier.h5' '
 
   displayName: 'Bash Script'
 
